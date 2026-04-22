@@ -1,0 +1,135 @@
+.section {
+  --why-bg: #fde3cc;
+  --why-accent: #dc771d;
+  --why-body: #555555;
+  --why-arrow: #555555;
+
+  background: var(--why-bg);
+  padding: 88px 24px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--why-accent);
+  margin-bottom: 14px;
+}
+
+.heading {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--why-accent);
+  margin-bottom: 28px;
+  max-width: 16ch;
+}
+
+.left p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--why-body);
+  line-height: 1.75;
+  margin-bottom: 18px;
+  max-width: 52ch;
+}
+
+.left p:last-child {
+  margin-bottom: 0;
+}
+
+.right {
+  height: 100%;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 34px 34px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 12px 32px rgba(44, 36, 22, 0.08);
+}
+
+.rightLabel {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--why-accent);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 26px;
+}
+
+.feature {
+  margin-bottom: 26px;
+}
+
+.feature:last-child {
+  margin-bottom: 0;
+}
+
+.featureTitle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.featureTitle strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--why-accent);
+  line-height: 1.35;
+}
+
+.arrow {
+  color: var(--why-arrow);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+  margin-top: 1px;
+}
+
+.feature p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--why-body);
+  line-height: 1.65;
+  padding-left: 26px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .heading {
+    max-width: none;
+  }
+
+  .left p {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 72px 20px;
+  }
+}

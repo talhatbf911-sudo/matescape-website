@@ -1,0 +1,131 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  display: block;
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoText {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 28px;
+}
+
+.navLinks a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-medium);
+  transition: color 0.2s;
+}
+
+.navLinks a:hover {
+  color: var(--orange);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btnOutline {
+  border: 1.5px solid var(--orange);
+  color: var(--orange);
+  border-radius: 24px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.btnOutline:hover {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-dark);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .navLinks { display: none; }
+  .navActions { display: none; }
+  .hamburger { display: flex; }
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileMenu {
+    display: block;
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    padding: 14px 24px 18px;
+  }
+
+  .mobileLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobileLinks a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-medium);
+  }
+
+  .mobileActions {
+    margin-top: 14px;
+    display: flex;
+  }
+}

@@ -1,36 +1,91 @@
+/* Hero.module.css */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .hero {
   background: var(--white);
   padding: 88px 24px;
+  position: relative;
+}
+
+/* Logo Wrapper - positioned at top left */
+.logoWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 24px;
+  height: 72px;
+  z-index: 10;
+}
+
+.logo {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding-left: 0;
+}
+
+.logoIcon {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .inner {
   max-width: 1120px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 72px;
-  align-items: center;
+  align-items: stretch;
+  padding-top: 20px; /* Adds space for logo */
 }
 
-.content {}
+.content {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
 
 .heading {
   font-family: 'DM Sans', sans-serif;
-  font-size: clamp(30px, 4vw, 52px);
-  font-weight: 700;
+  font-size: 45px;
+  font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: #DC771D;
-  margin-bottom: 22px;
-  max-width: 18ch;
+  margin-bottom: 12px;
+  max-width: 100%;
+}
+
+.heading2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #DC771D;
+  margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .sub {
-  font-size: 15px;
+  font-size: 18px;
   color: var(--text-medium);
   line-height: 1.7;
   margin-bottom: 14px;
-  max-width: 56ch;
+  max-width: 100%;
+  white-space: pre-wrap;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .launch {
@@ -48,7 +103,6 @@
 .btnPrimary {
   background: #f08b2c;
   color: var(--black);
-  font-weight: 900;
   border: none;
   border-radius: 14px;
   padding: 12px 24px;
@@ -56,6 +110,8 @@
   font-weight: 600;
   transition: background 0.2s, transform 0.15s;
   display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .btnPrimary:hover {
@@ -67,13 +123,14 @@
   background: transparent;
   color: var(--orange);
   border: 1.5px solid var(--orange);
-  font-weight: 900;
   border-radius: 14px;
   padding: 12px 24px;
   font-size: 14px;
   font-weight: 500;
   transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
   display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .btnSecondary:hover {
@@ -82,32 +139,137 @@
 }
 
 .imageWrap {
+  grid-column: 2 / 3;
   border-radius: 22px;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   background: #fff;
   border: 1px solid rgba(232, 216, 196, 0.85);
   box-shadow: 0 14px 36px rgba(44, 36, 22, 0.14);
+  width: 100%;
+  height: auto;
+  align-self: stretch;
+  min-height: 500px;
+  max-height: 700px;
 }
 
 .heroImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
-  .inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .imageWrap {
-    order: -1;
-  }
   .hero {
     padding: 64px 20px;
   }
+
+  .logoWrapper {
+    padding: 0 16px;
+    height: 64px;
+  }
+
+  .logoIcon {
+    height: 36px;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+    padding-top: 16px;
+  }
+
+  .content {
+    grid-column: 1 / 2;
+    padding: 0;
+    justify-content: center;
+  }
+
   .heading {
     max-width: none;
+    font-size: clamp(28px, 6vw, 40px);
+  }
+
+  .heading2 {
+    font-size: clamp(16px, 4vw, 26px);
+  }
+
+  .imageWrap {
+    grid-column: 1 / 2;
+    aspect-ratio: 16 / 9;
+    order: -1;
+    min-height: auto;
+    max-height: none;
+    align-self: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .sub {
+    font-size: 15px;
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: 14px;
+    max-width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+/* Optional: Small mobile devices */
+@media (max-width: 480px) {
+  .hero {
+    padding: 48px 16px;
+  }
+
+  .logoWrapper {
+    padding: 0 12px;
+    height: 56px;
+  }
+
+  .logoIcon {
+    height: 30px;
+  }
+
+  .inner {
+    padding-top: 12px;
+  }
+
+  .heading {
+    font-size: clamp(24px, 5vw, 32px);
+  }
+
+  .heading2 {
+    font-size: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .imageWrap {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* Optional: For larger screens where you want the image to extend more */
+@media (min-width: 1200px) {
+  .imageWrap {
+    min-height: 600px;
+    max-height: 800px;
+    margin-top: -60px;
+    margin-bottom: -60px;
   }
 }

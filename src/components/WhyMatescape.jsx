@@ -4,19 +4,23 @@ export default function WhyMatescape() {
   return (
     <section className={styles.section} id="why">
       <div className={styles.inner}>
+        {/* Heading spans full width */}
+        <div className={styles.headerWrapper}>
+          <h2 className={styles.heading}>Travel looks different for everyone.</h2>
+        </div>
+
+        {/* Two column layout below */}
         <div className={styles.grid}>
           <div className={styles.left}>
-            <div className={styles.label}>The Matescape Concept</div>
-            <h2 className={styles.heading}>Travel is better when it fits your vibe.</h2>
-
             <p>
-              Some experiences are perfect solo. Others intentionally bring together small groups of
-              like-minded travelers to share meaningful moments.
+              Some moments are meant to be experienced alone. Others become more meaningful when shared
             </p>
-            <p>A sunset hike. A hidden beach picnic. A quiet wellness morning.</p>
+            <p>A sunrise hike. A slow morning. A dinner that turns into stories.</p>
             <p>
-              Because the most meaningful travel feels real, personal, and sometimes wonderfully
-              shared.
+              Matescape creates experiences that feel natural, personal, and unforced, with space to explore your own way, or connect when it feels right.
+            </p>
+            <p>
+              No mass tourism. No rigid group tours. But curated experiences designed around different travel styles, where connection happens naturally through shared moments and beautiful places. Something you can step into whenever it fits your trip, your rhythm, and your way of exploring.
             </p>
           </div>
 
@@ -27,31 +31,29 @@ export default function WhyMatescape() {
               <div className={styles.feature}>
                 <div className={styles.featureTitle}>
                   <span className={styles.arrow} aria-hidden="true">
-                    →
+                    &#8658;
                   </span>
                   <strong>Curated, not crowded</strong>
                 </div>
-                <p>Handpicked experiences that go beyond the typical tourist trail.</p>
+                <p>No mass tours. Just carefully designed experiences that feel intentional, personal & authentic.</p>
               </div>
 
               <div className={styles.feature}>
                 <div className={styles.featureTitle}>
                   <span className={styles.arrow} aria-hidden="true">
-                    →
+                    &#8658;
                   </span>
                   <strong>Your style, your pace</strong>
                 </div>
-                <p>Adventure, wellness, food & culture. Explore how you like to travel.</p>
+                <p>Explore in a way that feels natural to you. </p>
               </div>
 
               <div className={styles.feature}>
                 <div className={styles.featureTitle}>
-                  <span className={styles.arrow} aria-hidden="true">
-                    →
-                  </span>
-                  <strong>Connect if you choose</strong>
+                  <span className={styles.arrow} aria-hidden="true">&#8658;                  </span>
+                  <strong>Solo or shared</strong>
                 </div>
-                <p>Solo or shared, every experience works beautifully either way.</p>
+                <p>Every experience works both ways. Come solo, join spontaneously, or meet like minded travelers along the way.</p>
               </div>
             </div>
           </div>

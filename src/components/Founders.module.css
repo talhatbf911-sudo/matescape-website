@@ -1,4 +1,4 @@
-/* Our Founders — white section, terracotta headings, gray bios, circular headshots */
+/* Our Founders — white section, terracotta headings, gray bios */
 
 .section {
   background: #ffffff;
@@ -38,17 +38,19 @@
 
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column; /* Changed from 'row' to 'column' */
   align-items: flex-start;
-  gap: clamp(20px, 3vw, 28px);
+  gap: clamp(16px, 2vw, 24px); /* Reduced gap between image and text */
 }
 
 .imgWrap {
-  width: 136px;
-  height: 136px;
-  border-radius: 50%;
+  width: 75%;
+  max-width: 100%;
+  height:450px;
+  border-radius: 16px; /* Rounded corners */
   overflow: hidden;
   flex-shrink: 0;
+  background: #f5f0eb; /* Fallback color */
 }
 
 .imgWrap img {
@@ -61,20 +63,21 @@
 
 .cardBody {
   min-width: 0;
+  width: 100%;
 }
 
 .name {
   font-family: 'DM Sans', system-ui, sans-serif;
-  font-size: clamp(16px, 1.5vw, 18px);
+  font-size: clamp(18px, 1.8vw, 22px); /* Slightly larger */
   font-weight: 700;
   line-height: 1.35;
   color: #c87941;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .bio {
   font-family: 'DM Sans', system-ui, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.58;
   color: #4a4a4a;
@@ -88,24 +91,27 @@
   }
 
   .card {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .imgWrap {
-    width: 112px;
-    height: 112px;
-  }
-}
-
-@media (max-width: 480px) {
-  .card {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .imgWrap {
-    width: 120px;
-    height: 120px;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imgWrap {
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .bio {
+    font-size: 15px;
   }
 }

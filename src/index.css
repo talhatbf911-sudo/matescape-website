@@ -14,20 +14,21 @@
   --section-bg: #fdf6ee;
   --warm-gray: #f5ede2;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
-body {
+/* body {
   font-family: 'DM Sans', sans-serif;
-  background-color: var(--cream);
   color: var(--text-dark);
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-}
+} */
 
-h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+h1, h2, h3, h4 {   font-family: 'DM Sans', sans-serif; }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
-button { cursor: pointer; font-family: 'DM Sans', sans-serif; }
+
+p, pre {font-family: Arial, Helvetica, sans-serif;  font-size: 18px;
+}
+button { cursor: pointer; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}

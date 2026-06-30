@@ -4,6 +4,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  background: #f8d7bd; /* Background color moved to section */
 }
 
 .inner {
@@ -11,16 +12,23 @@
   grid-template-columns: 4fr 6fr;
   width: 100%;
   min-width: 0;
-  min-height: min(640px, 85vh);
-  align-items: stretch;
+  min-height: min(540px, 75vh); /* Reduced height from 640px to 540px */
+  align-items: center; /* Changed from 'stretch' to 'center' */
+  gap: 0;
+  background: #f8d7bd; /* Background color applied to inner as well */
 }
 
 .imgCol {
   position: relative;
   min-width: 0;
-  max-width: 100%;
-  min-height: 420px;
-  overflow: hidden;
+  max-width: 85%; /* Slightly increased from 80% */
+  min-height: 350px; /* Reduced from 420px */
+  max-height: 450px; /* Added max-height to control height */
+  overflow: visible;
+  padding: 30px 0 30px 50px; /* Increased left padding from 42px to 50px */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align image to the left */
 }
 
 .imgCol img {
@@ -28,16 +36,20 @@
   max-width: 100%;
   height: 100%;
   min-height: 100%;
+  max-height: 450px; /* Match container max-height */
   object-fit: cover;
   object-position: center;
   display: block;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .textCol {
   min-width: 0;
   max-width: 100%;
-  background: #f8d7bd;
+  background: transparent; /* Removed background from textCol */
   padding: clamp(40px, 6vw, 80px);
+  padding-left: 20px; /* Reduced left padding to bring text closer */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,27 +81,17 @@
 }
 
 .contentRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(24px, 3.5vw, 48px);
-  align-items: start;
-}
-
-.card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: clamp(24px, 3vw, 36px);
-  box-shadow: 0 8px 32px rgba(44, 36, 22, 0.08);
+  
 }
 
 .quote {
   margin: 0 0 20px;
   padding: 0 0 0 18px;
-  border-left: 3px solid #d37536;
-  font-family: 'DM Sans', system-ui, sans-serif;
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 400;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-left: 2px solid #d37536;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
   line-height: 1.55;
   color: #4a4a4a;
 }
@@ -135,26 +137,6 @@
 }
 
 /* Squircle bullets: thin top/left edge, doubled bottom/right for slight 3D lift */
-.bullet {
-  box-sizing: border-box;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 11px;
-  background: #f4b491;
-  border-style: solid;
-  border-color: #d69b7b;
-  border-width: 1px 2px 2px 1px;
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.22);
-}
-
-.momentText {
-  font-family: 'DM Sans', system-ui, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.4;
-  color: #4a4a4a;
-}
 
 @media (max-width: 960px) {
   .contentRow {
@@ -170,14 +152,44 @@
   .inner {
     grid-template-columns: 1fr;
     min-height: 0;
+    align-items: stretch;
   }
 
   .imgCol {
-    min-height: 280px;
+    min-height: 250px;
+    max-height: 350px;
     aspect-ratio: 16 / 10;
+    padding: 20px 16px 16px 20px; /* Adjusted padding on mobile */
+    max-width: 100%;
+    justify-content: center;
   }
 
   .imgCol img {
-    min-height: 280px;
+    min-height: 250px;
+    max-height: 350px;
+    border-radius: 16px;
+  }
+
+  .textCol {
+    padding: clamp(32px, 5vw, 48px);
+    background: transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  .imgCol {
+    padding: 16px 12px 12px 16px;
+    min-height: 200px;
+    max-height: 280px;
+  }
+
+  .imgCol img {
+    min-height: 200px;
+    max-height: 280px;
+    border-radius: 12px;
+  }
+
+  .textCol {
+    padding: 24px 16px;
   }
 }

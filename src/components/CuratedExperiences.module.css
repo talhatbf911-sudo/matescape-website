@@ -1,0 +1,123 @@
+.section {
+  /* Background image - same as TravelerNote */
+  background-image: url('../assets/curatedExp-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  /* Same height as TravelerNote */
+  min-height: 60vh;
+  width: 100%;
+  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay - same as TravelerNote */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #fde3cc;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content container - centered on screen */
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width:1300px;
+  width: 100%;
+  padding: 40px 24px;
+  margin: 0 auto;
+}
+
+/* Content wrapper - centered */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 10px;
+  min-height: 200px;
+}
+
+/* Text content - centered both horizontally and vertically */
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Heading - large, colored, centered */
+.heading {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #DC771D;
+  font-style: italic;
+  margin-bottom: 16px;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* Subtext - smaller, centered */
+.subText {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 400;
+  color: #5a4a35;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    min-height: 40vh;
+  }
+
+  .content {
+    padding: 0 5px;
+    min-height: 150px;
+  }
+
+  .heading {
+    font-size: clamp(28px, 6vw, 38px);
+  }
+
+  .subText {
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  .textContent {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    min-height: 35vh;
+  }
+
+  .heading {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .subText {
+    font-size: 14px;
+  }
+}

@@ -23,8 +23,7 @@ export default function TravelStyles() {
   return (
     <section className={styles.section} id="styles">
       <div className={styles.inner}>
-        <div className={styles.label}>Travel Styles</div>
-        <h2 className={styles.heading}>Three Ways to Explore. One Authentic Place.</h2>
+        <h2 className={styles.heading}>Different Ways to Explore.</h2>
 
         <div className={styles.grid}>
           {travelStyles.map((style) => (
@@ -42,8 +41,7 @@ export default function TravelStyles() {
           <span className={styles.noteIcon} aria-hidden="true">
             ✨
           </span>{' '}
-          Every experience is designed to feel personal and authentic. Often in small groups, unique locations, or alongside locals who share their stories and traditions.
-        </p>
+Every experience is designed to feel personal and authentic. Often in small groups, unique locations, or alongside locals who share their stories and traditions.        </p>
       </div>
     </section>
   );

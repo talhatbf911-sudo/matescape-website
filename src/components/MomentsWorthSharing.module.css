@@ -14,7 +14,7 @@
   justify-content: center;
 }
 
-/* Overlay — purely visual, sits behind all content */
+/* Overlay â€” purely visual, sits behind all content */
 .overlay {
   position: absolute;
   inset: 0;
@@ -159,7 +159,7 @@
 
 @media (max-width: 560px) {
   .galleryGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 24px;
   }
 

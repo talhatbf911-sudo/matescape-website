@@ -132,7 +132,7 @@
 
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
     align-items: start; /* ADDED: reset on mobile */
   }

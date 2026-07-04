@@ -98,7 +98,7 @@
 /* Responsive */
 @media (max-width: 900px) {
   .inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
     align-items: center;
   }

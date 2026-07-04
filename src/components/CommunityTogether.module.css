@@ -1,4 +1,4 @@
-/* Community Together — split layout, peach panel, white card, square bullets */
+/* Community Together â€” split layout, peach panel, white card, square bullets */
 
 .section {
   width: 100%;
@@ -140,7 +140,7 @@
 
 @media (max-width: 960px) {
   .contentRow {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .listCol {
@@ -150,7 +150,7 @@
 
 @media (max-width: 768px) {
   .inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     min-height: 0;
     align-items: stretch;
   }

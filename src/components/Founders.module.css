@@ -1,4 +1,4 @@
-/* Our Founders — white section, terracotta headings, gray bios */
+/* Our Founders â€” white section, terracotta headings, gray bios */
 
 .section {
   background: #ffffff;
@@ -86,7 +86,7 @@
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
   }
 
@@ -96,6 +96,8 @@
   }
 
   .imgWrap {
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     border-radius: 14px;
   }
@@ -103,6 +105,8 @@
 
 @media (max-width: 480px) {
   .imgWrap {
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 10;
     border-radius: 12px;
   }

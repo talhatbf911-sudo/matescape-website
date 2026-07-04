@@ -154,7 +154,7 @@ color: var(--text-medium);  line-height: 1.65;
 
 @media (max-width: 900px) {
   .inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 36px;
     align-items: center;
   }
@@ -167,6 +167,8 @@ color: var(--text-medium);  line-height: 1.65;
   }
 
   .sideImage {
+    width: 100%;
+    height: auto;
     max-width: min(100%, 360px);
     aspect-ratio: 4 / 5;
   }
@@ -180,7 +182,7 @@ color: var(--text-medium);  line-height: 1.65;
   }
 
   .infoTop {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .infoCell:first-child {

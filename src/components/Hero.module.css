@@ -84,8 +84,15 @@
   line-height: 1.7;
   margin-bottom: 14px;
   max-width: 100%;
-  white-space: pre-wrap;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.sub p {
+  margin: 0 0 16px;
+}
+
+.sub p:last-child {
+  margin-bottom: 0;
 }
 
 .launch {

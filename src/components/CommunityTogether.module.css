@@ -31,7 +31,7 @@
 
 .imgCol img {
   width: 100%;
-  max-width: 100%;
+  max-width: 420px; /* Cap size so it stays a compact card on wide screens */
   aspect-ratio: 4 / 5; /* Portrait orientation */
   height: auto;
   object-fit: cover;

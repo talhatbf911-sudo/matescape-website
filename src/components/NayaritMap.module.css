@@ -69,6 +69,14 @@
   color: var(--text-medium);
 }
 
+.body p {
+  margin: 0 0 18px;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
 .body:last-of-type {
   margin-bottom: 0;
 }

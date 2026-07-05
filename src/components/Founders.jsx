@@ -35,7 +35,6 @@ export default function Founders() {
   return (
     <section className={styles.section} id="founders" aria-labelledby="founders-heading">
       <div className={styles.inner}>
-        <p className={styles.label}>Our Founders</p>
         <h2 id="founders-heading" className={styles.heading}>
           The People Behind Matescape
         </h2>

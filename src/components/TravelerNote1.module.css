@@ -1,24 +1,31 @@
 .section {
+  /* Background image + peach tint — matches TravelerNote for a consistent look */
+  background-image: url('../assets/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   /* Half viewport height */
   min-height: 55vh;
   width: 100%;
   
   position: relative;
+  isolation: isolate;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Overlay */
-/* .overlay {
+/* Overlay tint (pseudo-element so content flows above it) */
+.section::before {
+  content: '';
   position: absolute;
   inset: 0;
   background-color: #fde3cc;
   opacity: 0.85;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+  z-index: 0;
+}
 
 /* Content container - centered on screen */
 .inner {

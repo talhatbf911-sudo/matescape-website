@@ -33,7 +33,7 @@
   z-index: 1;
   max-width: 1120px;
   width: 100%;
-  padding-top: 30px;
+  padding-top: 0;
   margin: 0 auto;
 }
 
@@ -129,7 +129,7 @@
   color: #5a4a35;
   letter-spacing: 0.02em;
   text-align: left;
-  margin-top: 50px;
+  margin-top: 24px;
   /* No padding so it starts at same left as heading */
 }
 

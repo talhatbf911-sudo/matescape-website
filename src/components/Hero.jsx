@@ -18,17 +18,12 @@ export default function Hero() {
             Welcome To Matescape!
           </h1>
           <p className={styles.heading2}>Curated travel. Shared experiences. A more personal way to explore authentic places together.</p>
-          <pre className={styles.sub}>
-{`Explore Mexico through thoughtfully curated experiences.
-From jungle hikes to hidden beaches, designed for travelers
-who want to explore deeper, meet like-minded people, and experience places more authentically.
-
-We started with intimate pilot experiences in Sayulita, San Pancho and Puerto Vallarta.After expanding into Oaxaca, Puerto Escondido and Mazunte, we're now continuing further south.
-
-New region, new energy. The same idea: travel that feels personal, real, and worth sharing.
-
-Matescape is building a new way to explore places through curated experiences, like-minded travelers, and local connections, starting in Mexico.`}
-</pre>
+          <div className={styles.sub}>
+            <p>Explore Mexico through thoughtfully curated experiences. From jungle hikes to hidden beaches, designed for travelers who want to explore deeper, meet like-minded people, and experience places more authentically.</p>
+            <p>We started with intimate pilot experiences in Sayulita, San Pancho and Puerto Vallarta. After expanding into Oaxaca, Puerto Escondido and Mazunte, we're now continuing further south.</p>
+            <p>New region, new energy. The same idea: travel that feels personal, real, and worth sharing.</p>
+            <p>Matescape is building a new way to explore places through curated experiences, like-minded travelers, and local connections, starting in Mexico.</p>
+          </div>
           <div className={styles.actions}>
             <a href="#journey" className={styles.btnPrimary}>Follow Our Journey</a>
             <a href="#experiences" className={styles.btnSecondary}>Download the app</a>

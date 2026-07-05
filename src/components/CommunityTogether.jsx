@@ -11,7 +11,6 @@ export default function CommunityTogether() {
 
         <div className={styles.textCol}>
           <header className={styles.header}>
-            <p className={styles.label}>Community Feeling</p>
             <h2 id="community-together-heading" className={styles.heading}>
 Traveling solo is beautiful. 
 But some experiences become even better when shared with the right people.            </h2>

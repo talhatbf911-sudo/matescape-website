@@ -11,17 +11,26 @@
   width: 100%;
   
   position: relative;
+  isolation: isolate;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Overlay */
-.overlay {
+/* Overlay tint (moved to pseudo-element so content can flow and set height) */
+.section::before {
+  content: '';
   position: absolute;
   inset: 0;
   background-color: #fde3cc;
   opacity: 0.85;
+  z-index: 0;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +167,12 @@
 
 @media (max-width: 768px) {
   .section {
-    min-height: 40vh;
+    min-height: auto;
+    padding: 28px 0;
+  }
+
+  .inner {
+    padding-top: 0;
   }
 
   .content {
@@ -206,12 +220,14 @@
 
   .subText {
     padding-left: 0;
+    margin-top: 22px;
   }
 }
 
 @media (max-width: 480px) {
   .section {
-    min-height: 35vh;
+    min-height: auto;
+    padding: 22px 0;
   }
 
   .heading {

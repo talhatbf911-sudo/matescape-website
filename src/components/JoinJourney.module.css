@@ -153,14 +153,18 @@ color: var(--text-medium);  line-height: 1.65;
 }
 
 @media (max-width: 900px) {
+  .section {
+    padding: 32px 20px 56px;
+  }
+
   .inner {
     grid-template-columns: minmax(0, 1fr);
-    gap: 36px;
-    align-items: center;
+    gap: 32px;
+    align-items: stretch;
   }
 
   .imageColumn {
-    justify-self: center;
+    justify-self: stretch;
     padding-left: 0;
     padding-top: 0;
     order: -1;
@@ -169,8 +173,9 @@ color: var(--text-medium);  line-height: 1.65;
   .sideImage {
     width: 100%;
     height: auto;
-    max-width: min(100%, 360px);
+    max-width: 100%;
     aspect-ratio: 4 / 5;
+    margin: 0 auto;
   }
 
   .content {
@@ -179,6 +184,18 @@ color: var(--text-medium);  line-height: 1.65;
 
   .heading {
     max-width: none;
+    font-size: 34px;
+  }
+
+  .label {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .sub {
+    font-size: 17px;
+    max-width: none;
+    margin-bottom: 22px;
   }
 
   .infoTop {
@@ -188,5 +205,28 @@ color: var(--text-medium);  line-height: 1.65;
   .infoCell:first-child {
     border-right: none;
     border-bottom: 1px solid #e8e4e0;
+  }
+
+  .infoCell h3,
+  .infoBottom h3 {
+    font-size: 20px;
+  }
+
+  .infoCell p,
+  .infoBottom p {
+    font-size: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    font-size: 17px;
+    padding: 14px 20px;
   }
 }

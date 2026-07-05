@@ -145,18 +145,34 @@
 
 @media (max-width: 560px) {
   .section {
-    padding: 64px 20px 72px;
+    padding: 48px 20px 56px;
+  }
+
+  .heading {
+    margin-bottom: 32px;
   }
 
   .grid {
     grid-template-columns: minmax(0, 1fr);
-    gap: 40px;
+    gap: 36px;
+    margin-bottom: 36px;
   }
 
   .imgWrap {
-    width: min(220px, 78vw);
+    width: min(200px, 60vw);
+    margin-bottom: 16px;
   }
-  
+
+  .cardTitle {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .cardDesc {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
   .note {
     padding: 16px 18px;
     font-size: 14px;
